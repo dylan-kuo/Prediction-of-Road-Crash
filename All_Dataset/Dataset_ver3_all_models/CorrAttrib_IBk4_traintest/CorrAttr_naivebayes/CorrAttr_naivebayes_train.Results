@@ -1,0 +1,106 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     Allegheny_County_Crash_Data_Nominal-weka.filters.supervised.instance.Resample-B0.0-S1-Z33.0-no-replacement-V-weka.filters.unsupervised.attribute.Remove-V-R17,56,19,63,62,52,18,64,34,51,69
+Instances:    8037
+Attributes:   11
+              PROPERTY_DAMAGE_ONLY
+              INJURY_OR_FATAL
+              INJURY
+              MODERATE_INJURY
+              MINOR_INJURY
+              PEDESTRIAN
+              FATAL_OR_MAJ_INJ
+              MAJOR_INJURY
+              MOTORCYCLE
+              UNBELTED
+              MAX_SEVERITY_LEVEL
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                          Class
+Attribute              NoInjury   Injury
+                         (0.52)   (0.48)
+=========================================
+PROPERTY_DAMAGE_ONLY
+  NO                       121.0   3846.0
+  YES                     4073.0      1.0
+  [total]                 4194.0   3847.0
+
+INJURY_OR_FATAL
+  NO                      4193.0    355.0
+  YES                        1.0   3492.0
+  [total]                 4194.0   3847.0
+
+INJURY
+  NO                      4193.0    379.0
+  YES                        1.0   3468.0
+  [total]                 4194.0   3847.0
+
+MODERATE_INJURY
+  NO                      4193.0   2778.0
+  YES                        1.0   1069.0
+  [total]                 4194.0   3847.0
+
+MINOR_INJURY
+  NO                      4193.0   2802.0
+  YES                        1.0   1045.0
+  [total]                 4194.0   3847.0
+
+PEDESTRIAN
+  NO                      4192.0   3566.0
+  YES                        2.0    281.0
+  [total]                 4194.0   3847.0
+
+FATAL_OR_MAJ_INJ
+  NO                      4193.0   3614.0
+  YES                        1.0    233.0
+  [total]                 4194.0   3847.0
+
+MAJOR_INJURY
+  NO                      4193.0   3649.0
+  YES                        1.0    198.0
+  [total]                 4194.0   3847.0
+
+MOTORCYCLE
+  NO                      4184.0   3682.0
+  YES                       10.0    165.0
+  [total]                 4194.0   3847.0
+
+UNBELTED
+  NO                      3928.0   3375.0
+  YES                      266.0    472.0
+  [total]                 4194.0   3847.0
+
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        7685               95.6203 %
+Incorrectly Classified Instances       352                4.3797 %
+Kappa statistic                          0.9119
+Mean absolute error                      0.0408
+Root mean squared error                  0.1876
+Relative absolute error                  8.1739 %
+Root relative squared error             37.5484 %
+Total Number of Instances             8037     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.092    0.923      1.000    0.960      0.915    0.999     0.999     NoInjury
+                 0.908    0.000    1.000      0.908    0.952      0.915    0.999     0.998     Injury
+Weighted Avg.    0.956    0.048    0.960      0.956    0.956      0.915    0.999     0.998     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 4192    0 |    a = NoInjury
+  352 3493 |    b = Injury
+

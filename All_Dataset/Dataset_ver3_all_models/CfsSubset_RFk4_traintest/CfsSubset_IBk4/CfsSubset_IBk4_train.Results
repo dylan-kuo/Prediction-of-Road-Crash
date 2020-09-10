@@ -1,0 +1,46 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 4 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     Allegheny_County_Crash_Data_Nominal-weka.filters.supervised.instance.Resample-B0.0-S1-Z33.0-no-replacement-V-weka.filters.unsupervised.attribute.Remove-R1-4,6-16,18-32,34-55,57-68
+Instances:    8037
+Attributes:   5
+              ROAD_CONDITION
+              PROPERTY_DAMAGE_ONLY
+              OVERTURNED
+              INJURY_OR_FATAL
+              MAX_SEVERITY_LEVEL
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 4 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        7914               98.4696 %
+Incorrectly Classified Instances       123                1.5304 %
+Kappa statistic                          0.9694
+Mean absolute error                      0.0223
+Root mean squared error                  0.1063
+Relative absolute error                  4.4603 %
+Root relative squared error             21.2818 %
+Total Number of Instances             8037     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.971    0.001    0.999      0.971    0.985      0.970    0.999     0.999     NoInjury
+                 0.999    0.029    0.970      0.999    0.984      0.970    0.999     0.998     Injury
+Weighted Avg.    0.985    0.014    0.985      0.985    0.985      0.970    0.999     0.999     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 4072  120 |    a = NoInjury
+    3 3842 |    b = Injury
+

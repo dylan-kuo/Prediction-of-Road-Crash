@@ -1,0 +1,127 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.misc.InputMappedClassifier -I -trim -W weka.classifiers.bayes.NaiveBayes
+Relation:     Allegheny_County_Crash_Data_Nominal-weka.filters.supervised.instance.Resample-B0.0-S1-Z33.0-no-replacement-V-weka.filters.unsupervised.attribute.Remove-V-R17,56,19,63,62,52,18,64,34,51,69
+Instances:    8037
+Attributes:   11
+              PROPERTY_DAMAGE_ONLY
+              INJURY_OR_FATAL
+              INJURY
+              MODERATE_INJURY
+              MINOR_INJURY
+              PEDESTRIAN
+              FATAL_OR_MAJ_INJ
+              MAJOR_INJURY
+              MOTORCYCLE
+              UNBELTED
+              MAX_SEVERITY_LEVEL
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+InputMappedClassifier:
+
+Naive Bayes Classifier
+
+                          Class
+Attribute              NoInjury   Injury
+                         (0.52)   (0.48)
+=========================================
+PROPERTY_DAMAGE_ONLY
+  NO                       121.0   3846.0
+  YES                     4073.0      1.0
+  [total]                 4194.0   3847.0
+
+INJURY_OR_FATAL
+  NO                      4193.0    355.0
+  YES                        1.0   3492.0
+  [total]                 4194.0   3847.0
+
+INJURY
+  NO                      4193.0    379.0
+  YES                        1.0   3468.0
+  [total]                 4194.0   3847.0
+
+MODERATE_INJURY
+  NO                      4193.0   2778.0
+  YES                        1.0   1069.0
+  [total]                 4194.0   3847.0
+
+MINOR_INJURY
+  NO                      4193.0   2802.0
+  YES                        1.0   1045.0
+  [total]                 4194.0   3847.0
+
+PEDESTRIAN
+  NO                      4192.0   3566.0
+  YES                        2.0    281.0
+  [total]                 4194.0   3847.0
+
+FATAL_OR_MAJ_INJ
+  NO                      4193.0   3614.0
+  YES                        1.0    233.0
+  [total]                 4194.0   3847.0
+
+MAJOR_INJURY
+  NO                      4193.0   3649.0
+  YES                        1.0    198.0
+  [total]                 4194.0   3847.0
+
+MOTORCYCLE
+  NO                      4184.0   3682.0
+  YES                       10.0    165.0
+  [total]                 4194.0   3847.0
+
+UNBELTED
+  NO                      3928.0   3375.0
+  YES                      266.0    472.0
+  [total]                 4194.0   3847.0
+
+
+Attribute mappings:
+
+Model attributes                	    Incoming attributes
+--------------------------------	    ----------------
+(nominal) PROPERTY_DAMAGE_ONLY  	--> 1 (nominal) PROPERTY_DAMAGE_ONLY
+(nominal) INJURY_OR_FATAL       	--> 7 (nominal) INJURY_OR_FATAL
+(nominal) INJURY                	--> 3 (nominal) INJURY
+(nominal) MODERATE_INJURY       	--> 9 (nominal) MODERATE_INJURY
+(nominal) MINOR_INJURY          	--> 8 (nominal) MINOR_INJURY
+(nominal) PEDESTRIAN            	--> 6 (nominal) PEDESTRIAN
+(nominal) FATAL_OR_MAJ_INJ      	--> 2 (nominal) FATAL_OR_MAJ_INJ
+(nominal) MAJOR_INJURY          	--> 10 (nominal) MAJOR_INJURY
+(nominal) MOTORCYCLE            	--> 4 (nominal) MOTORCYCLE
+(nominal) UNBELTED              	--> 5 (nominal) UNBELTED
+(nominal) MAX_SEVERITY_LEVEL    	--> 11 (nominal) MAX_SEVERITY_LEVEL
+
+
+Time taken to build model: 0 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.04 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        3787               95.7038 %
+Incorrectly Classified Instances       170                4.2962 %
+Kappa statistic                          0.9136
+Mean absolute error                      0.0398
+Root mean squared error                  0.1855
+Relative absolute error                  7.9788 %
+Root relative squared error             37.1248 %
+Total Number of Instances             3957     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.090    0.924      1.000    0.960      0.917    0.999     0.998     NoInjury
+                 0.910    0.000    1.000      0.910    0.953      0.917    0.999     0.998     Injury
+Weighted Avg.    0.957    0.047    0.960      0.957    0.957      0.917    0.999     0.998     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2064    0 |    a = NoInjury
+  170 1723 |    b = Injury
+

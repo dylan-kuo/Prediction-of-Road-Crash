@@ -1,0 +1,21 @@
+Model,Accuracy,ROC Area,F-Measure,TPR,FPR,Type
+CfsSubset_kNN (k=4),98.76%,0.999,0.988,0.988,0.011,1
+CfsSubset_Naive bayes,98.76%,0.999,0.988,0.988,0.011,1
+CfsSubset_Random Forest (k=4),98.76%,0.999,0.988,0.988,0.011,1
+CfsSubset_Adaboost + Random Forest (k=4),98.76%,0.999,0.988,0.988,0.011,1
+CorrelationAttribute_kNN (k=4),98.76%,0.999,0.988,0.988,0.011,2
+CorrelationAttribute_Naive bayes,95.70%,0.999,0.957,0.957,0.047,2
+CorrelationAttribute_Random Forest (k=4),98.76%,0.999,0.988,0.988,0.011,2
+CorrelationAttribute_Adaboost + Random Forest (k=4),98.76%,0.999,0.988,0.988,0.011,2
+InfoGainAttribute_kNN (k=4),98.76%,0.999,0.988,0.988,0.011,3
+InfoGainAttribute_Naive bayes,95.70%,0.999,0.957,0.957,0.047,3
+InfoGainAttributeRandom Forest (k=4),98.79%,0.999,0.988,0.988,0.011,3
+InfoGainAttribute_Adaboost + Random Forest (k=4),98.79%,0.999,0.988,0.988,0.011,3
+GainRatioAttribute_kNN (k=4),98.74%,0.999,0.987,0.987,0.012,4
+GainRatioAttribute_Naive bayes,95.70%,0.999,0.957,0.957,0.047,4
+GainRatioAttribute_Random Forest (k=4),98.79%,0.999,0.988,0.988,0.011,4
+GainRatioAttribute_Adaboost + Random Forest (k=4),98.76%,0.999,0.988,0.988,0.011,4
+ClassifierAttribute_kNN (k=4),98.74%,0.999,0.987,0.987,0.012,5
+ClassifierAttribute_Naive bayes,95.70%,0.999,0.957,0.957,0.047,5
+ClassifierAttribute_Random Forest (k=4),98.79%,0.999,0.988,0.988,0.011,5
+ClassifierAttribute_Adaboost + Random Forest (k=4),98.76%,0.999,0.988,0.988,0.011,5

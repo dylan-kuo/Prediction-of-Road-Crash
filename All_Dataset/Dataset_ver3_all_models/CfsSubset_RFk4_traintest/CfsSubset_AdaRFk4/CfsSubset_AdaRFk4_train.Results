@@ -1,0 +1,327 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.AdaBoostM1 -P 100 -S 1 -I 10 -W weka.classifiers.trees.RandomTree -- -K 4 -M 1.0 -V 0.001 -S 1
+Relation:     Allegheny_County_Crash_Data_Nominal-weka.filters.supervised.instance.Resample-B0.0-S1-Z33.0-no-replacement-V-weka.filters.unsupervised.attribute.Remove-R1-4,6-16,18-32,34-55,57-68
+Instances:    8037
+Attributes:   5
+              ROAD_CONDITION
+              PROPERTY_DAMAGE_ONLY
+              OVERTURNED
+              INJURY_OR_FATAL
+              MAX_SEVERITY_LEVEL
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+AdaBoostM1: Base classifiers and their weights: 
+
+
+RandomTree
+==========
+
+PROPERTY_DAMAGE_ONLY = NO
+|   INJURY_OR_FATAL = NO
+|   |   ROAD_CONDITION = Wet
+|   |   |   OVERTURNED = NO : Injury (85/17)
+|   |   |   OVERTURNED = YES : Injury (2/0)
+|   |   ROAD_CONDITION = Dry
+|   |   |   OVERTURNED = NO : Injury (360/94)
+|   |   |   OVERTURNED = YES : Injury (8/1)
+|   |   ROAD_CONDITION = Ice : NoInjury (4/2)
+|   |   ROAD_CONDITION = Ice patches : Injury (5/2)
+|   |   ROAD_CONDITION = Snow-covered
+|   |   |   OVERTURNED = NO : Injury (7/3)
+|   |   |   OVERTURNED = YES : Injury (1/0)
+|   |   ROAD_CONDITION = Slush : NoInjury (2/1)
+|   |   ROAD_CONDITION = Sand/Mud/Dirt/Oil/Gravel : NoInjury (0/0)
+|   |   ROAD_CONDITION = Water-standing-or-moving : NoInjury (0/0)
+|   INJURY_OR_FATAL = YES : Injury (3491/0)
+PROPERTY_DAMAGE_ONLY = YES : NoInjury (4072/0)
+
+Size of the tree : 19
+
+Weight: 4.19
+
+
+RandomTree
+==========
+
+INJURY_OR_FATAL = NO
+|   ROAD_CONDITION = Wet
+|   |   PROPERTY_DAMAGE_ONLY = NO
+|   |   |   OVERTURNED = NO : NoInjury (603.8/34.52)
+|   |   |   OVERTURNED = YES : Injury (1.02/0)
+|   |   PROPERTY_DAMAGE_ONLY = YES : NoInjury (384.74/0)
+|   ROAD_CONDITION = Dry
+|   |   PROPERTY_DAMAGE_ONLY = NO
+|   |   |   OVERTURNED = NO : NoInjury (3282.84/135.02)
+|   |   |   OVERTURNED = YES : NoInjury (37.04/3.55)
+|   |   PROPERTY_DAMAGE_ONLY = YES : NoInjury (1558.27/0)
+|   ROAD_CONDITION = Ice
+|   |   PROPERTY_DAMAGE_ONLY = NO : Injury (67.99/1.02)
+|   |   PROPERTY_DAMAGE_ONLY = YES : NoInjury (15.23/0)
+|   ROAD_CONDITION = Ice patches
+|   |   PROPERTY_DAMAGE_ONLY = NO : NoInjury (68.5/1.52)
+|   |   PROPERTY_DAMAGE_ONLY = YES : NoInjury (26.9/0)
+|   ROAD_CONDITION = Snow-covered
+|   |   OVERTURNED = NO
+|   |   |   PROPERTY_DAMAGE_ONLY = NO : NoInjury (102.49/2.03)
+|   |   |   PROPERTY_DAMAGE_ONLY = YES : NoInjury (59.39/0)
+|   |   OVERTURNED = YES : NoInjury (1.02/0.51)
+|   ROAD_CONDITION = Slush
+|   |   PROPERTY_DAMAGE_ONLY = NO : Injury (34/0.51)
+|   |   PROPERTY_DAMAGE_ONLY = YES : NoInjury (11.17/0)
+|   ROAD_CONDITION = Sand/Mud/Dirt/Oil/Gravel : NoInjury (1.52/0)
+|   ROAD_CONDITION = Water-standing-or-moving : NoInjury (9.14/0)
+INJURY_OR_FATAL = YES : Injury (1771.96/0)
+
+Size of the tree : 29
+
+Weight: 3.78
+
+
+RandomTree
+==========
+
+PROPERTY_DAMAGE_ONLY = NO
+|   INJURY_OR_FATAL = NO
+|   |   ROAD_CONDITION = Wet
+|   |   |   OVERTURNED = NO : Injury (1067.42/291.12)
+|   |   |   OVERTURNED = YES : Injury (0.52/0)
+|   |   ROAD_CONDITION = Dry
+|   |   |   OVERTURNED = NO : Injury (4646.4/1609.7)
+|   |   |   OVERTURNED = YES : Injury (97.04/17.12)
+|   |   ROAD_CONDITION = Ice : Injury (57.08/22.83)
+|   |   ROAD_CONDITION = Ice patches : NoInjury (68.5/34.25)
+|   |   ROAD_CONDITION = Snow-covered
+|   |   |   OVERTURNED = NO : NoInjury (97.04/45.66)
+|   |   |   OVERTURNED = YES : Injury (11.42/0)
+|   |   ROAD_CONDITION = Slush : Injury (28.54/11.42)
+|   |   ROAD_CONDITION = Sand/Mud/Dirt/Oil/Gravel : NoInjury (0/0)
+|   |   ROAD_CONDITION = Water-standing-or-moving : NoInjury (0/0)
+|   INJURY_OR_FATAL = YES : Injury (906.12/0)
+PROPERTY_DAMAGE_ONLY = YES : NoInjury (1056.93/0)
+
+Size of the tree : 19
+
+Weight: 1.08
+
+
+RandomTree
+==========
+
+INJURY_OR_FATAL = NO
+|   PROPERTY_DAMAGE_ONLY = NO
+|   |   ROAD_CONDITION = Wet
+|   |   |   OVERTURNED = NO : NoInjury (1095.19/519.5)
+|   |   |   OVERTURNED = YES : Injury (0.35/0)
+|   |   ROAD_CONDITION = Dry
+|   |   |   OVERTURNED = NO : NoInjury (5215.37/2032.17)
+|   |   |   OVERTURNED = YES : Injury (87.34/33.86)
+|   |   ROAD_CONDITION = Ice : NoInjury (68.07/22.92)
+|   |   ROAD_CONDITION = Ice patches : Injury (90.65/22.92)
+|   |   ROAD_CONDITION = Snow-covered
+|   |   |   OVERTURNED = NO : Injury (124.68/34.38)
+|   |   |   OVERTURNED = YES : Injury (7.64/0)
+|   |   ROAD_CONDITION = Slush : NoInjury (34.04/11.46)
+|   |   ROAD_CONDITION = Sand/Mud/Dirt/Oil/Gravel : NoInjury (0/0)
+|   |   ROAD_CONDITION = Water-standing-or-moving : NoInjury (0/0)
+|   PROPERTY_DAMAGE_ONLY = YES : NoInjury (707.3/0)
+INJURY_OR_FATAL = YES : Injury (606.38/0)
+
+Size of the tree : 19
+
+Weight: 0.69
+
+
+RandomTree
+==========
+
+PROPERTY_DAMAGE_ONLY = NO
+|   INJURY_OR_FATAL = NO
+|   |   ROAD_CONDITION = Wet
+|   |   |   OVERTURNED = NO : Injury (1211.39/431.62)
+|   |   |   OVERTURNED = YES : Injury (0.26/0)
+|   |   ROAD_CONDITION = Dry
+|   |   |   OVERTURNED = NO : Injury (5436.89/2386.6)
+|   |   |   OVERTURNED = YES : NoInjury (90.92/40.1)
+|   |   ROAD_CONDITION = Ice : Injury (68.25/33.85)
+|   |   ROAD_CONDITION = Ice patches : Injury (85.18/34.4)
+|   |   ROAD_CONDITION = Snow-covered
+|   |   |   OVERTURNED = NO : Injury (119.31/51.6)
+|   |   |   OVERTURNED = YES : Injury (5.73/0)
+|   |   ROAD_CONDITION = Slush : Injury (34.13/16.93)
+|   |   ROAD_CONDITION = Sand/Mud/Dirt/Oil/Gravel : NoInjury (0/0)
+|   |   ROAD_CONDITION = Water-standing-or-moving : NoInjury (0/0)
+|   INJURY_OR_FATAL = YES : Injury (454.63/0)
+PROPERTY_DAMAGE_ONLY = YES : NoInjury (530.3/0)
+
+Size of the tree : 19
+
+Weight: 0.52
+
+
+RandomTree
+==========
+
+INJURY_OR_FATAL = NO
+|   PROPERTY_DAMAGE_ONLY = NO
+|   |   ROAD_CONDITION = Wet
+|   |   |   OVERTURNED = NO : Injury (1200.6/579.1)
+|   |   |   OVERTURNED = YES : Injury (0.21/0)
+|   |   ROAD_CONDITION = Dry
+|   |   |   OVERTURNED = NO : NoInjury (5633.23/2431.15)
+|   |   |   OVERTURNED = YES : Injury (94.31/40.51)
+|   |   ROAD_CONDITION = Ice : NoInjury (72.84/27.42)
+|   |   ROAD_CONDITION = Ice patches : NoInjury (86.63/40.47)
+|   |   ROAD_CONDITION = Snow-covered
+|   |   |   OVERTURNED = NO : NoInjury (123.2/53.96)
+|   |   |   OVERTURNED = YES : Injury (4.57/0)
+|   |   ROAD_CONDITION = Slush : NoInjury (36.42/13.71)
+|   |   ROAD_CONDITION = Sand/Mud/Dirt/Oil/Gravel : NoInjury (0/0)
+|   |   ROAD_CONDITION = Water-standing-or-moving : NoInjury (0/0)
+|   PROPERTY_DAMAGE_ONLY = YES : NoInjury (422.66/0)
+INJURY_OR_FATAL = YES : Injury (362.35/0)
+
+Size of the tree : 19
+
+Weight: 0.42
+
+
+RandomTree
+==========
+
+PROPERTY_DAMAGE_ONLY = NO
+|   INJURY_OR_FATAL = NO
+|   |   ROAD_CONDITION = Wet
+|   |   |   OVERTURNED = NO : NoInjury (1245.22/514.87)
+|   |   |   OVERTURNED = YES : Injury (0.17/0)
+|   |   ROAD_CONDITION = Dry
+|   |   |   OVERTURNED = NO : Injury (5718.83/2652.74)
+|   |   |   OVERTURNED = YES : NoInjury (95.66/44.57)
+|   |   ROAD_CONDITION = Ice : NoInjury (72.21/34.58)
+|   |   ROAD_CONDITION = Ice patches : Injury (89.28/38.24)
+|   |   ROAD_CONDITION = Snow-covered
+|   |   |   OVERTURNED = NO : Injury (125.41/57.36)
+|   |   |   OVERTURNED = YES : Injury (3.78/0)
+|   |   ROAD_CONDITION = Slush : NoInjury (36.1/17.29)
+|   |   ROAD_CONDITION = Sand/Mud/Dirt/Oil/Gravel : NoInjury (0/0)
+|   |   ROAD_CONDITION = Water-standing-or-moving : NoInjury (0/0)
+|   INJURY_OR_FATAL = YES : Injury (300.19/0)
+PROPERTY_DAMAGE_ONLY = YES : NoInjury (350.15/0)
+
+Size of the tree : 19
+
+Weight: 0.33
+
+
+RandomTree
+==========
+
+INJURY_OR_FATAL = NO
+|   PROPERTY_DAMAGE_ONLY = NO
+|   |   ROAD_CONDITION = Wet
+|   |   |   OVERTURNED = NO : NoInjury (1243.31/615.84)
+|   |   |   OVERTURNED = YES : Injury (0.15/0)
+|   |   ROAD_CONDITION = Dry
+|   |   |   OVERTURNED = NO : NoInjury (5807.16/2634.2)
+|   |   |   OVERTURNED = YES : Injury (97.2/43.9)
+|   |   ROAD_CONDITION = Ice : Injury (73.69/32.33)
+|   |   ROAD_CONDITION = Ice patches : NoInjury (89.59/43.85)
+|   |   ROAD_CONDITION = Snow-covered
+|   |   |   OVERTURNED = NO : NoInjury (127.07/58.47)
+|   |   |   OVERTURNED = YES : Injury (3.25/0)
+|   |   ROAD_CONDITION = Slush : Injury (36.84/16.16)
+|   |   ROAD_CONDITION = Sand/Mud/Dirt/Oil/Gravel : NoInjury (0/0)
+|   |   ROAD_CONDITION = Water-standing-or-moving : NoInjury (0/0)
+|   PROPERTY_DAMAGE_ONLY = YES : NoInjury (300.83/0)
+INJURY_OR_FATAL = YES : Injury (257.9/0)
+
+Size of the tree : 19
+
+Weight: 0.29
+
+
+RandomTree
+==========
+
+PROPERTY_DAMAGE_ONLY = NO
+|   INJURY_OR_FATAL = NO
+|   |   ROAD_CONDITION = Wet
+|   |   |   OVERTURNED = NO : Injury (1267.49/549.07)
+|   |   |   OVERTURNED = YES : Injury (0.13/0)
+|   |   ROAD_CONDITION = Dry
+|   |   |   OVERTURNED = NO : Injury (5849.48/2776.54)
+|   |   |   OVERTURNED = YES : NoInjury (97.85/46.65)
+|   |   ROAD_CONDITION = Ice : NoInjury (73.91/36.19)
+|   |   ROAD_CONDITION = Ice patches : Injury (91.18/40.02)
+|   |   ROAD_CONDITION = Snow-covered
+|   |   |   OVERTURNED = NO : Injury (128.24/60.03)
+|   |   |   OVERTURNED = YES : Injury (2.84/0)
+|   |   ROAD_CONDITION = Slush : NoInjury (36.95/18.1)
+|   |   ROAD_CONDITION = Sand/Mud/Dirt/Oil/Gravel : NoInjury (0/0)
+|   |   ROAD_CONDITION = Water-standing-or-moving : NoInjury (0/0)
+|   INJURY_OR_FATAL = YES : Injury (225.68/0)
+PROPERTY_DAMAGE_ONLY = YES : NoInjury (263.24/0)
+
+Size of the tree : 19
+
+Weight: 0.25
+
+
+RandomTree
+==========
+
+PROPERTY_DAMAGE_ONLY = NO
+|   INJURY_OR_FATAL = NO
+|   |   ROAD_CONDITION = Wet
+|   |   |   OVERTURNED = NO : Injury (1265.73/625.66)
+|   |   |   OVERTURNED = YES : Injury (0.12/0)
+|   |   ROAD_CONDITION = Dry
+|   |   |   OVERTURNED = NO : NoInjury (5901.63/2737.82)
+|   |   |   OVERTURNED = YES : Injury (98.78/45.62)
+|   |   ROAD_CONDITION = Ice : Injury (74.84/33.6)
+|   |   ROAD_CONDITION = Ice patches : NoInjury (91.18/45.58)
+|   |   ROAD_CONDITION = Snow-covered
+|   |   |   OVERTURNED = NO : NoInjury (129.18/60.77)
+|   |   |   OVERTURNED = YES : Injury (2.53/0)
+|   |   ROAD_CONDITION = Slush : Injury (37.42/16.8)
+|   |   ROAD_CONDITION = Sand/Mud/Dirt/Oil/Gravel : NoInjury (0/0)
+|   |   ROAD_CONDITION = Water-standing-or-moving : NoInjury (0/0)
+|   INJURY_OR_FATAL = YES : Injury (201.07/0)
+PROPERTY_DAMAGE_ONLY = YES : NoInjury (234.53/0)
+
+Size of the tree : 19
+
+Weight: 0.23
+
+Number of performed Iterations: 10
+
+
+Time taken to build model: 0.08 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        7910               98.4198 %
+Incorrectly Classified Instances       127                1.5802 %
+Kappa statistic                          0.9684
+Mean absolute error                      0.0228
+Root mean squared error                  0.1077
+Relative absolute error                  4.5737 %
+Root relative squared error             21.5664 %
+Total Number of Instances             8037     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.971    0.002    0.998      0.971    0.985      0.969    0.998     0.998     NoInjury
+                 0.998    0.029    0.970      0.998    0.984      0.969    0.998     0.997     Injury
+Weighted Avg.    0.984    0.015    0.985      0.984    0.984      0.969    0.998     0.998     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 4072  120 |    a = NoInjury
+    7 3838 |    b = Injury
+

@@ -1,0 +1,75 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.misc.InputMappedClassifier -I -trim -W weka.classifiers.trees.RandomForest -- -P 100 -I 100 -num-slots 1 -K 4 -M 1.0 -V 0.001 -S 1
+Relation:     Allegheny_County_Crash_Data_Nominal-weka.filters.supervised.instance.Resample-B0.0-S1-Z33.0-no-replacement-V-weka.filters.unsupervised.attribute.Remove-V-R17,56,19,63,62,52,18,64,34,51,69
+Instances:    8037
+Attributes:   11
+              PROPERTY_DAMAGE_ONLY
+              INJURY_OR_FATAL
+              INJURY
+              MODERATE_INJURY
+              MINOR_INJURY
+              PEDESTRIAN
+              FATAL_OR_MAJ_INJ
+              MAJOR_INJURY
+              MOTORCYCLE
+              UNBELTED
+              MAX_SEVERITY_LEVEL
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+InputMappedClassifier:
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 4 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+Attribute mappings:
+
+Model attributes                	    Incoming attributes
+--------------------------------	    ----------------
+(nominal) PROPERTY_DAMAGE_ONLY  	--> 1 (nominal) PROPERTY_DAMAGE_ONLY
+(nominal) INJURY_OR_FATAL       	--> 7 (nominal) INJURY_OR_FATAL
+(nominal) INJURY                	--> 3 (nominal) INJURY
+(nominal) MODERATE_INJURY       	--> 9 (nominal) MODERATE_INJURY
+(nominal) MINOR_INJURY          	--> 8 (nominal) MINOR_INJURY
+(nominal) PEDESTRIAN            	--> 6 (nominal) PEDESTRIAN
+(nominal) FATAL_OR_MAJ_INJ      	--> 2 (nominal) FATAL_OR_MAJ_INJ
+(nominal) MAJOR_INJURY          	--> 10 (nominal) MAJOR_INJURY
+(nominal) MOTORCYCLE            	--> 4 (nominal) MOTORCYCLE
+(nominal) UNBELTED              	--> 5 (nominal) UNBELTED
+(nominal) MAX_SEVERITY_LEVEL    	--> 11 (nominal) MAX_SEVERITY_LEVEL
+
+
+Time taken to build model: 0.15 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.07 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        3908               98.7617 %
+Incorrectly Classified Instances        49                1.2383 %
+Kappa statistic                          0.9752
+Mean absolute error                      0.0202
+Root mean squared error                  0.0986
+Relative absolute error                  4.0422 %
+Root relative squared error             19.7343 %
+Total Number of Instances             3957     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.976    0.000    1.000      0.976    0.988      0.976    0.999     0.998     NoInjury
+                 1.000    0.024    0.975      1.000    0.987      0.976    0.999     0.998     Injury
+Weighted Avg.    0.988    0.011    0.988      0.988    0.988      0.976    0.999     0.998     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2015   49 |    a = NoInjury
+    0 1893 |    b = Injury
+

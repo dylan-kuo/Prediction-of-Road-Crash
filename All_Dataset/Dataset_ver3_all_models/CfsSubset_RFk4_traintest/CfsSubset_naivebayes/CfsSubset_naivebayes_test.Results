@@ -1,0 +1,79 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     Allegheny_County_Crash_Data_Nominal-weka.filters.supervised.instance.Resample-B0.0-S1-Z33.0-no-replacement-V-weka.filters.unsupervised.attribute.Remove-R1-4,6-16,18-32,34-55,57-68
+Instances:    8037
+Attributes:   5
+              ROAD_CONDITION
+              PROPERTY_DAMAGE_ONLY
+              OVERTURNED
+              INJURY_OR_FATAL
+              MAX_SEVERITY_LEVEL
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                                Class
+Attribute                    NoInjury   Injury
+                               (0.52)   (0.48)
+===============================================
+ROAD_CONDITION
+  Wet                            776.0    697.0
+  Dry                           3166.0   3027.0
+  Ice                             33.0     24.0
+  Ice patches                     56.0     28.0
+  Snow-covered                   122.0     42.0
+  Slush                           24.0     22.0
+  Sand/Mud/Dirt/Oil/Gravel         4.0      6.0
+  Water-standing-or-moving        19.0      7.0
+  [total]                       4200.0   3853.0
+
+PROPERTY_DAMAGE_ONLY
+  NO                             121.0   3846.0
+  YES                           4073.0      1.0
+  [total]                       4194.0   3847.0
+
+OVERTURNED
+  NO                            4130.0   3707.0
+  YES                             64.0    140.0
+  [total]                       4194.0   3847.0
+
+INJURY_OR_FATAL
+  NO                            4193.0    355.0
+  YES                              1.0   3492.0
+  [total]                       4194.0   3847.0
+
+
+
+Time taken to build model: 0 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.01 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        3908               98.7617 %
+Incorrectly Classified Instances        49                1.2383 %
+Kappa statistic                          0.9752
+Mean absolute error                      0.0203
+Root mean squared error                  0.0987
+Relative absolute error                  4.0648 %
+Root relative squared error             19.7627 %
+Total Number of Instances             3957     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.976    0.000    1.000      0.976    0.988      0.976    0.999     0.999     NoInjury
+                 1.000    0.024    0.975      1.000    0.987      0.976    0.999     0.998     Injury
+Weighted Avg.    0.988    0.011    0.988      0.988    0.988      0.976    0.999     0.998     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2015   49 |    a = NoInjury
+    0 1893 |    b = Injury
+

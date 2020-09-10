@@ -1,0 +1,94 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 4 -M 1.0 -V 0.001 -S 1
+Relation:     Allegheny_County_Crash_Data_Nominal-weka.filters.supervised.instance.Resample-B0.0-S1-Z33.0-no-replacement-V-weka.filters.unsupervised.attribute.Remove-R1-5,7-16,21-32,36-37,39-50,53-54,57-61,65-66,68
+Instances:    8037
+Attributes:   18
+              COLLISION_TYPE
+              PROPERTY_DAMAGE_ONLY
+              FATAL_OR_MAJ_INJ
+              INJURY
+              FATAL
+              OVERTURNED
+              MOTORCYCLE
+              BICYCLE
+              TRAIN_TROLLEY
+              UNBELTED
+              PEDESTRIAN
+              MC_DRINKING_DRIVER
+              INJURY_OR_FATAL
+              MINOR_INJURY
+              MODERATE_INJURY
+              MAJOR_INJURY
+              TRAIN
+              MAX_SEVERITY_LEVEL
+Test mode:    evaluate on training data
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 4 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 0.33 seconds
+
+=== Evaluation on training set ===
+
+Time taken to test model on training data: 0.11 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        7919               98.5318 %
+Incorrectly Classified Instances       118                1.4682 %
+Kappa statistic                          0.9706
+Mean absolute error                      0.0201
+Root mean squared error                  0.0998
+Relative absolute error                  4.0205 %
+Root relative squared error             19.9782 %
+Total Number of Instances             8037     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.972    0.000    1.000      0.972    0.986      0.971    0.999     0.999     NoInjury
+                 1.000    0.028    0.970      1.000    0.985      0.971    0.999     0.999     Injury
+Weighted Avg.    0.985    0.013    0.986      0.985    0.985      0.971    0.999     0.999     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 4075  117 |    a = NoInjury
+    1 3844 |    b = Injury
+
+
+=== Re-evaluation on test set ===
+
+User supplied test set
+Relation:     Allegheny_County_Crash_Data_Nominal-weka.filters.supervised.instance.Resample-B0.0-S1-Z33.0-no-replacement-weka.filters.unsupervised.attribute.Remove-R1-5,7-16,21-32,36-37,39-50,53-54,57-61,65-66,68
+Instances:     unknown (yet). Reading incrementally
+Attributes:   18
+
+=== Summary ===
+
+Correctly Classified Instances        3909               98.787  %
+Incorrectly Classified Instances        48                1.213  %
+Kappa statistic                          0.9757
+Mean absolute error                      0.0183
+Root mean squared error                  0.0943
+Total Number of Instances             3957     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.977    0.000    1.000      0.977    0.988      0.976    0.999     0.999     NoInjury
+                 1.000    0.023    0.975      1.000    0.987      0.976    0.999     0.999     Injury
+Weighted Avg.    0.988    0.011    0.988      0.988    0.988      0.976    0.999     0.999     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2016   48 |    a = NoInjury
+    0 1893 |    b = Injury
+
